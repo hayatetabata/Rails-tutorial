@@ -17,9 +17,14 @@ default: &default
   password:
   host: localhost
 
-development:
-  <<: *default
+development: &default
+  adapter: mysql
+  encoding: unicode
   database: myapp_development
+  pool: 5
+  username: mysql
+  password:
+  host: db
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

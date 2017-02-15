@@ -1,9 +1,9 @@
 
 stop:
-    @docker-compose down
+		@docker-compose down
 
 build:
-    @docker-compose build
+		@docker-compose build
 
 web:
-    @docker-compose run web
+		@docker-compose run web

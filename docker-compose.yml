@@ -3,7 +3,9 @@ services:
     db:
         image: mysql
         environment:
-            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+            MYSQL_ROOT_PASSWORD: mysql
+            MYSQL_USER: ruby
+            MYSQL_PASSWORD: ruby
     web:
         build: .
         command: bundle exec rails s -p 3000 -b '0.0.0.0'
